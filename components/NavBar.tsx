@@ -51,7 +51,7 @@ const NavBar = () => {
               <a className="py-5 px-3 text-black">Login</a>
             </Link>
             <Link href={"/signup"}>
-              <a className="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 hover:text-yellow-800 rounded transition duration-300">
+              <a className="px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg rounded transition duration-300">
                 Signup
               </a>
             </Link>
