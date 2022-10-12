@@ -7,12 +7,12 @@ import {
 import Head from "next/head";
 import { ScriptProps } from "next/script";
 import { Suspense } from "react";
+import Item, { ItemType } from "../components/Item";
 import NavBar from "../components/NavBar";
-import { Item } from "../data/items";
 import styles from "../styles/pages/index.module.css";
 
 interface PropsType {
-  data: Array<Item>;
+  data: Array<ItemType>;
 }
 
 const Home: NextPage<PropsType> = ({ data }) => {
@@ -22,17 +22,9 @@ const Home: NextPage<PropsType> = ({ data }) => {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex flex-wrap gap-4 w-6/12 m-auto mt-5">
+      <div className="flex flex-wrap gap-3 w-7/12 m-auto mt-5">
         {data.map((item, idx) => (
-          <div
-            key={idx}
-            className="flex flex-col w-50 h-60 bg-blue-100 rounded-md p-5"
-          >
-            <span>이름: {item.name}</span>
-            <span>설명: {item.description}</span>
-            <span>카테고리: {item.category}</span>
-            <span>가격: {item.price}</span>
-          </div>
+          <Item key={idx} data={item}></Item>
         ))}
       </div>
     </div>

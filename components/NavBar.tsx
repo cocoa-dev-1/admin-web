@@ -2,10 +2,11 @@ import styles from "../styles/components/NavBar.module.css";
 import { classes } from "../utils/class";
 import Link from "next/link";
 import { navLinks } from "../utils/navData";
-import { useState } from "react";
+import { FunctionComponent, useState } from "react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { NextComponentType } from "next";
 
-const NavBar = () => {
+const NavBar: FunctionComponent = () => {
   const [menuToggle, setMenuToggle] = useState(false);
 
   return (

@@ -1,8 +1,9 @@
 import { ScriptProps } from "next/script";
 import NavBar from "./NavBar";
 import { classes } from "../utils/class";
+import { FunctionComponent } from "react";
 
-const Layout = ({ children }: ScriptProps) => {
+const Layout: FunctionComponent<ScriptProps> = ({ children }) => {
   return (
     <div className={classes("w-full", "p-0")}>
       <NavBar></NavBar>
